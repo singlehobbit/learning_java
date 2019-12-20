@@ -1,6 +1,10 @@
+//main scope
 function withVar() {
+  //function scope
+  // #1 block
   var i = 'function var';
   if (true) {
+    // #2 block
     var i = 'block var';
     console.log('in block: ', i);
   }
@@ -19,9 +23,9 @@ function withLet() {
     //since i is declered here, in block #2
     //this block has separate value for i, 
     //for now it's undefined
-    //so le't define it:
+    //so let's define it:
     i = 'block var';
-    //so i in this block is set to vlaue - 'block var'
+    //so i in this block is set to value - 'block var'
     console.log('in block: ', i);// 'in block: block var'
   }
   //back in block #1
@@ -35,6 +39,7 @@ function withLet() {
 //let i = // makes i local to the block in which it was defined and 
           // usable in any descendent(included) blocks;
           // ** but if in descendent(included) scopes:
-          // i is beig declared once again,
+          // i is being declared once again,
           // then i looses reference and value which were assigned to i in parent block;
-          // or in other words i have completely new meaning in that descendent(included) block
+          // or in other words i have completely new reference in that descendent(included) block
+//
